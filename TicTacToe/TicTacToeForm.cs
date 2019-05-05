@@ -138,8 +138,11 @@ namespace TicTacToe
 
             isXTurn = !isXTurn;
 
-            if (xRoleIsSelected && !isXTurn) PerformComputerMove(false);
-            else if (!xRoleIsSelected && isXTurn) PerformComputerMove(true);
+            if (isOnePlayerMode)
+            {
+                if (xRoleIsSelected && !isXTurn) PerformComputerMove(false);
+                else if (!xRoleIsSelected && isXTurn) PerformComputerMove(true);
+            }
         }
 
         private void TicTacToeButton_MouseEnter(object sender, EventArgs e)
