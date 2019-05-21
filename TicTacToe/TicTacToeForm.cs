@@ -9,13 +9,10 @@ namespace TicTacToe
         /* PROPERTIES */
         #region Properties
 
-        // Static properties
-        private static Random random = new Random();
-
         // Complex properties
 
         private string _XPlayerName = "";
-        string XPlayerName
+        private string XPlayerName
         {
             get { return _XPlayerName; }
 
@@ -27,7 +24,7 @@ namespace TicTacToe
         }
 
         private string _OPlayerName = "";
-        string OPlayerName
+        private string OPlayerName
         {
             get { return _OPlayerName; }
 
@@ -409,6 +406,8 @@ namespace TicTacToe
         private Button RandomMove()
         {
             Button[] allButtons = { A1, A2, A3, B1, B2, B3, C1, C2, C3 };
+            Random random = new Random();
+
             return allButtons[random.Next(allButtons.Length)];
         }
 

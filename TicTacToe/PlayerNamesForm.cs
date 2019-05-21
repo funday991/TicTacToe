@@ -98,6 +98,9 @@ namespace TicTacToe
             switch (onePlayerModeCheckBox.Checked)
             {
                 case true:
+                    XPlayerName = xPlayerTextBox.Text;
+                    OPlayerName = oPlayerTextBox.Text;
+
                     ToggleTextBoxesState();
                     break;
                 case false:
@@ -154,13 +157,13 @@ namespace TicTacToe
 
         private void EnableTextBox(TextBox textBox, string playerName)
         {
-            textBox.Text = playerName == "Computer" ? "" : playerName;
+            textBox.Text = playerName == "Комп." ? "" : playerName;
             textBox.Enabled = true;
         }
         
         private void DisableTextBox(TextBox textBox)
         {
-            textBox.Text = "Computer";
+            textBox.Text = "Комп.";
             textBox.Enabled = false;
         }
 
